@@ -19,12 +19,9 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" />
-        <activity android:name=".SignupActivity" >
-
-        </activity>
-        <activity android:name=".ProfileActivity">
-
-        </activity>
+        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".PostActivity"></activity>
     </application>
 
 </manifest>

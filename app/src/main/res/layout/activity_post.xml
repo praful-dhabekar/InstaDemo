@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.praful.instademo.PostActivity">
+
+    <ImageView
+        android:id="@+id/post_pic"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/post_like_text"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="Like"
+        android:textSize="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="50dp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_below="@+id/post_pic"/>
+    <ImageButton
+        android:id="@+id/post_like_button"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/post_like_text"
+        android:layout_below="@+id/post_pic"
+        android:background="@mipmap/like"/>
+</RelativeLayout>
