@@ -16,19 +16,19 @@
         android:id="@+id/post_like_text"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:text="Like"
-        android:textSize="15dp"
-        android:layout_marginTop="4dp"
+        android:layout_below="@+id/post_pic"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Like"
         android:textAllCaps="false"
-        android:textStyle="bold"
-        android:layout_below="@+id/post_pic"/>
+        android:textSize="15dp"
+        android:textStyle="bold"/>
     <ImageButton
         android:id="@+id/post_like_button"
         android:layout_width="25dp"
         android:layout_height="25dp"
+        android:layout_below="@+id/post_pic"
         android:layout_marginLeft="2dp"
         android:layout_toRightOf="@+id/post_like_text"
-        android:layout_below="@+id/post_pic"
         android:background="@mipmap/like"/>
 </RelativeLayout>
