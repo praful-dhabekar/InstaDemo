@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.praful.instademo.ProfileActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        
+        <ImageView
+            android:id="@+id/profile_cover_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@mipmap/cover" />
+
+        <ImageButton
+            android:id="@+id/profile_user_img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/profile_cover_img"
+            android:layout_marginTop="-60dp"
+            android:background="@mipmap/man"
+            android:elevation="5dp"
+            android:padding="20dp"/>
+        <TextView
+            android:id="@+id/profile_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="10dp"
+            android:text="followers"/>
+        <TextView
+            android:id="@+id/profile_followers_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/profile_followers"
+            android:text="458"/>
+
+        <TextView
+            android:id="@+id/profile_following"
+            android:layout_toRightOf="@+id/profile_user_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="220dp"
+            android:layout_marginLeft="100dp"
+            android:text="following"/>
+        <TextView
+            android:id="@+id/profile_following_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/profile_user_img"
+            android:layout_below="@+id/profile_following"
+            android:text="251"/>
+        <Button
+            android:id="@+id/profile_follow_btn"
+            android:layout_below="@+id/profile_user_img"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:text="follow"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="230dp"
+            android:textColor="#ffffff"
+            android:background="#0277bd"
+            android:textAllCaps="false"/>
+        <TextView
+            android:id="@+id/profile_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Praful Dhabekar, 21"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:textStyle="italic"
+            android:layout_below="@id/profile_user_img"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
+</ScrollView>
