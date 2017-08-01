@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "172328465417",
+    "firebase_url": "https://instademo-praful.firebaseio.com",
+    "project_id": "instademo-praful",
+    "storage_bucket": "instademo-praful.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172328465417:android:bcfd42f07d2487a7",
+        "android_client_info": {
+          "package_name": "com.praful.instademo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "172328465417-kagh13ibqe4hnjjn8db218e1sis7agu5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.praful.instademo",
+            "certificate_hash": "d7e6df98b07d05ef64db8ee954bd12a8bd08257a"
+          }
+        },
+        {
+          "client_id": "172328465417-c0bn8ih53b34012ks3khu0gck5a5n20i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu01tgo2sKMhO9_9nKmPH-BHvh8DbTPMA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "172328465417-c0bn8ih53b34012ks3khu0gck5a5n20i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
