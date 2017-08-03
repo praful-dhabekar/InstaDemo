@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,80 +7,95 @@
     tools:context="com.praful.instademo.ProfileActivity">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         
         <ImageView
             android:id="@+id/profile_cover_img"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="165dp"
             android:background="@mipmap/cover" />
 
         <ImageButton
             android:id="@+id/profile_user_img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_below="@+id/profile_cover_img"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-60dp"
             android:background="@mipmap/man"
             android:elevation="5dp"
             android:padding="20dp"/>
-        <TextView
-            android:id="@+id/profile_followers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="220dp"
-            android:text="followers"/>
-        <TextView
-            android:id="@+id/profile_followers_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_followers"
-            android:layout_marginLeft="30dp"
-            android:text="458"
-            android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/profile_following"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="220dp"
-            android:layout_toRightOf="@+id/profile_user_img"
-            android:text="following"/>
-        <TextView
-            android:id="@+id/profile_following_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/profile_following"
-            android:layout_marginLeft="120dp"
-            android:layout_toRightOf="@+id/profile_user_img"
-            android:text="251"
-            android:textStyle="bold"/>
-        <Button
-            android:id="@+id/profile_follow_btn"
-            android:layout_width="60dp"
-            android:layout_height="25dp"
-            android:layout_below="@+id/profile_user_img"
-            android:layout_marginLeft="230dp"
-            android:layout_marginTop="10dp"
-            android:background="#0277bd"
-            android:text="follow"
-            android:textAllCaps="false"
-            android:textColor="#ffffff"/>
-        <TextView
-            android:id="@+id/profile_user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:layout_below="@id/profile_user_img"
-            android:layout_margin="10dp"
-            android:text="Praful Dhabekar, 21"
-            android:textAllCaps="false"
-            android:textSize="20dp"
-            android:textStyle="italic"/>
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:cardUseCompatPadding="true"
+            android:cardPreventCornerOverlap="false"
+            android:cardElevation="5dp"
+            android:cardCornerRadius="20dp"
+            android:layout_below="@+id/profile_user_img">
+            <LinearLayout
+                android:id="@+id/linear_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/profile_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_user_img"
+                    android:text="Praful Dhabekar, 21"
+                    android:textAllCaps="false"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="3dp"
+            android:cardUseCompatPadding="true"
+            android:cardPreventCornerOverlap="false"
+            android:cardElevation="5dp"
+            android:cardCornerRadius="20dp"
+            android:layout_below="@+id/card_view_1">
+            <LinearLayout
+                android:id="@+id/linear_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_user_img"
+                    android:text="pddhabekar@gmail.com"
+                    android:textAllCaps="false"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/profile_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/profile_user_img"
+                    android:text="+917207808375"
+                    android:textAllCaps="false"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
     </RelativeLayout>
-
-</ScrollView>
+    </ScrollView>
+</RelativeLayout>
