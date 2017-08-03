@@ -2,27 +2,35 @@ package com.praful.instademo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SigninActivity extends AppCompatActivity {
 
     Button signup,signin;
 
-    EditText usernameET, passwordET;
+    EditText emailET, passwordET;
 
-    String uname = "praful", pwd = "123";
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
+        mAuth = FirebaseAuth.getInstance();
         signup = (Button)findViewById(R.id.signup);
         signin = (Button)findViewById(R.id.signin);
-        usernameET = (EditText)findViewById(R.id.username);
+        emailET = (EditText)findViewById(R.id.username);
         passwordET = (EditText)findViewById(R.id.password);
 
         signup.setOnClickListener(new View.OnClickListener() {
@@ -40,20 +48,53 @@ public class SigninActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String s1 = usernameET.getText().toString();
-                String s2 = passwordET.getText().toString();
+                    attemptSignin();
 
-                if (s1.equals(uname) && s2.equals(pwd)){
+            }
+        });
+    }
 
-                    Toast.makeText(SigninActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(SigninActivity.this,ProfileActivity.class);
-                    startActivity(intent);
-                }
-                else
-                    Toast.makeText(SigninActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+    public void attemptSignin(){
+        if (!validateForm()) {
+            return;
+        }
+        String email = emailET.getText().toString();
+        String password = passwordET.getText().toString();
+
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                Intent i1 = new Intent(SigninActivity.this, MainActivity.class);
+                startActivity(i1);
             }
         });
 
+    }
 
+    public boolean validateForm(){
+        boolean valid = true;
+
+        String email = emailET.getText().toString();
+        if (TextUtils.isEmpty(email)){
+            emailET.setError("Required");
+            valid = false;
+        }
+        else{
+
+            emailET.setError(null);
+        }
+
+        String password = passwordET.getText().toString();
+        if (TextUtils.isEmpty(password)){
+            passwordET.setError("Required");
+            valid = false;
+        }
+        else{
+
+            passwordET.setError(null);
+        }
+
+        return valid;
     }
 }

@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="username"
-        android:inputType="text"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
         android:textSize="20dp"/>
     <EditText
         android:id="@+id/password"
@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/username"
         android:layout_margin="10dp"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:textSize="20dp"/>
     <Button
